@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Shield, Menu, X, Sparkles } from "lucide-react";
+import { Shield, Menu, X, Sparkles, Mic, Volume2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar({ onOpenPreOrder }) {
@@ -20,10 +20,12 @@ export default function Navbar({ onOpenPreOrder }) {
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+          <a href="#voice-sos-console" className="text-accent font-bold hover:text-white transition-colors flex items-center gap-1.5 bg-accent/10 px-3 py-1 rounded-full border border-accent/30">
+            <Mic className="w-3.5 h-3.5 animate-pulse" /> Live Voice SOS
+          </a>
           <a href="#features" className="hover:text-accent transition-colors">Features</a>
-          <a href="#specs" className="hover:text-accent transition-colors">Specifications</a>
           <a href="#flow" className="hover:text-accent transition-colors">How It Works</a>
-          <a href="#subsidies" className="hover:text-accent transition-colors">Govt. Subsidy</a>
+          <a href="#specs" className="hover:text-accent transition-colors">Specifications</a>
         </div>
 
         {/* CTA Button */}
@@ -56,9 +58,10 @@ export default function Navbar({ onOpenPreOrder }) {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden pt-4 pb-6 px-4 bg-surface border-b border-white/10 flex flex-col gap-4 text-center text-sm font-medium text-gray-200"
           >
+            <a href="#voice-sos-console" className="text-accent font-bold" onClick={() => setMobileMenuOpen(false)}>Live Voice SOS</a>
             <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
-            <a href="#specs" onClick={() => setMobileMenuOpen(false)}>Specifications</a>
             <a href="#flow" onClick={() => setMobileMenuOpen(false)}>How It Works</a>
+            <a href="#specs" onClick={() => setMobileMenuOpen(false)}>Specifications</a>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);

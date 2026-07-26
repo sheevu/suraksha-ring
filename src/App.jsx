@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import VoiceSOSConsole from "./components/VoiceSOSConsole";
 import VoiceActivationFlow from "./components/VoiceActivationFlow";
 import Features from "./components/Features";
 import TechSpecs from "./components/TechSpecs";
@@ -21,6 +22,8 @@ export default function App() {
         onOpenPreOrder={() => setPreOrderOpen(true)}
         onOpenVideoModal={() => setVideoOpen(true)}
       />
+
+      <VoiceSOSConsole />
 
       <div id="flow">
         <VoiceActivationFlow />
